@@ -1,6 +1,6 @@
 public class Hello {
     public static void main(String[] args) {
-        System.out.println("Hello world");
+        System.out.println("Hello world"); //system.out.println() is used to print a statement
         System.out.println("Welcome to JAVA");
         System.out.println("Lets begin with hello world Program");
 
@@ -9,6 +9,20 @@ public class Hello {
 O/P:Hello World
     Welcome to JAVA
     Lets begin with hello world Program
+
+public : It is an access specifier
+class : Class is a keyword used to define a class followed by its name
+*In the above program Hello is name of class
+-------------------------------
+***DEFINING MAIN METHOD***
+METHOD : Method is a set of statements that are used to perform an operation
+SYNTAX : 
+public static void main(string[] args){
+//block of codes
+}
+
+
+**********************************************************************************************************************************
 ---------------------------------------------------------------------------------------------------------------------------------
 //Variable decalaration
 //variable is declared followed as
@@ -51,8 +65,9 @@ In JAVA We have 8 primitive data types
 *int
 *long
 *float
+*short
 *double
-boolean
+*boolean
 *byte
 *char
 
@@ -183,7 +198,152 @@ public class Hello {
 O/P :
 4.32
 3.456
+
+
 *****************************************************************************************************************************************
+
+**** CHAR DATA TYPE ***
+Char is a data type which is used to store a character enclosed within single quotes
+The width of the char datatype is 16 bits - 2 Bytes (Usually asked in interview)
+
+Example :
+public class Hello {
+    public static void main(String[] args) {
+       char name = 'A';//Here a single character is enclosed within single quotes
+        System.out.println(name);
+//        To print unicodes
+        char unicode1='\u013F';
+        System.out.println(unicode1);
+    }
+}
+
+O/P :
+
+A
+Ŀ
+
+public class Hello {
+    public static void main(String[] args) {
+       char name = 'A';
+       char hello = 'D';
+       
+        System.out.println(name+hello);
+    }
+}
+O/P :
+133
+Here the characters are converted into ASCII values and we got the sum
+
+****************************************************************************************************************
+** BOOLEAN DATA TYPE **
+BOOLEAN is a datatype that is used to store flag values (true,false)
+
+EXAMPLE :
+public class Hello {
+    public static void main(String[] args) {
+       boolean above18 = true; //Here everything should be in small letters.If we use caps we get error
+       boolean below18 = false;
+
+        System.out.println(above18);
+        System.out.println(below18);
+    }
+}
+O/P :
+true
+false
+****************************************************************************************************************
+STORAGE WIDTH OF DATATYPES
+boolean - 1 bit
+byte    - 8 bits
+char    - 16 bits *
+short   - 16 bits
+int     - 32 bits
+float   - 32 bits
+double  - 64 bits
+long    - 64 bits
+**************************************************************************************************************
+
+*****************                 STRINGS                ********************
+String is special datatype is JAVA which is used to store a sequence of characters 
+String has storage width of 2.14 billion which is very huge
+String is immutable
+
+EXAMPLE :
+
+public class Hello {
+    public static void main(String[] args) {
+        String name;//Here 'S' should be capital letter and string value should be enclosed within double quotes
+        name = "John";
+        System.out.println(name);
+        String surname = "Rezina";
+        System.out.println(surname);
+//        Appendind two strings
+        String full_name = name+surname;
+        System.out.println(full_name);
+        String num1 = "100";
+        String num2 = "105";
+        System.out.println(num1+num2);
+        num1 = "Hello";
+//      Here num1="100" is destroyed and A new String is created of variable name num1.From this we can say that strings are immutable  
+        System.out.println(num1);
+
+    }
+}
+
+O/P:
+John
+Rezina
+JohnRezina
+100105
+Hello
+**To show strings are immutable
+public class Hello {
+    public static void main(String[] args) {
+        String name;//Here 'S' should be capital letter and string  value should be enclosed within double quotes
+        
+        System.out.println(name.hashCode()); //hashcode() is used to 
+        name = "Rezina";
+
+        System.out.println(name.hashCode());
+
+    }
+}
+O/P:
+2314539
+-1850362379
+
+**************************************************************************************************************************************************
+------------------                 OPERATORS ON OPERANDS            -----------------------------
+Operators :
++
+-
+*
+/
+%
+
+Example :
+public class Hello {
+    public static void main(String[] args) {
+       int num1 = 10;
+        System.out.println(num1);
+       num1= num1 +10;  // or it can be written as num1+=10
+        System.out.println(num1);
+        num1 = num1 -10;
+        System.out.println(num1);
+        num1 = num1 * 10;
+        System.out.println(num1);
+        num1=num1/10;
+        System.out.println(num1);
+        //num1 = num1 +1
+        num1++;
+        System.out.println(num1);
+//        num1 = num1 - 1;
+        num1--;
+        System.out.println(num1);
+}
+}
+**********************************************************************************************************
+
 
 
 
