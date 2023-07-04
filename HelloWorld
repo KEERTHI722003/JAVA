@@ -6,3 +6,184 @@ public class Hello {
 
     }
 }
+O/P:Hello World
+    Welcome to JAVA
+    Lets begin with hello world Program
+---------------------------------------------------------------------------------------------------------------------------------
+//Variable decalaration
+//variable is declared followed as
+//Syntax:Data_type variable_name = Value;
+
+
+
+
+public class Hello {
+    public static void main(String[] args) {
+        int num1=10;
+        int num2=20;
+        System.out.println(num1);
+        System.out.println(num2);
+//In JAVA value cannot be changed once we assign
+// For Example if we try to change the value of num1=20 again.It shows error as
+//        Error:Value is Already defined
+    }
+}
+O/P:10
+    20
+*************************************************************************************************************************************
+//Write a program to declare 3 variables and Add them
+
+public class Hello {
+    public static void main(String[] args) {
+        int num1=10;
+        int num2=20;
+        int num3=30;
+
+        System.out.println(num1+num2+num3);
+
+    }
+}
+O/P:60
+************************************************************************************************************************************
+
+PRIMITIVE DATA TYPES
+In JAVA We have 8 primitive data types
+*int
+*long
+*float
+*double
+boolean
+*byte
+*char
+
+Let us discuss about Int data type
+To delcare an integer we use int keyword
+Range : -2^31 to 2^31-1
+
+
+EXAMPLE--
+
+public class Hello {
+    public static void main(String[] args) {
+    int value=11111111111;
+        System.out.println(value);
+
+    }
+}
+
+O/P : Eroor : Integer number is too large 
+
+**To know maxvalue and minvalue of integer
+
+public class Hello {
+    public static void main(String[] args) {
+    int Maxvalue=Integer.MAX_VALUE;
+    int Minvalue=Integer.MIN_VALUE;
+        System.out.println(Maxvalue);
+        System.out.println(Minvalue);
+    }
+}
+
+O/P:2147483647
+   -2147483648
+
+** OVERFLOW occurs when we try to assign a value to maxvalue of integer 
+** UNDERFLOW occurs when we try to assign a value to mINvalue of integer 
+
+*******************************************************************************************************
+**SHORT,LONG,BYTE**
+
+public class Hello {
+    public static void main(String[] args) {
+    byte Maxvalue=Byte.MAX_VALUE;
+    byte Minvalue=Byte.MIN_VALUE;
+    System.out.println("max value of byte:"+Maxvalue);
+    System.out.println("MINVALUE of Byte : "+Minvalue);
+    short Maxvalue1=Short.MAX_VALUE;
+    short Minvalue1=Short.MIN_VALUE;
+        System.out.println("max value of short:"+Maxvalue1);
+        System.out.println("MINVALUE of short : "+Minvalue1);
+    Long Maxvalue2=Long.MAX_VALUE;
+    Long Minvalue2=Long.MIN_VALUE;
+        System.out.println("max value of long:"+Maxvalue2);
+        System.out.println("MINVALUE of long : "+Minvalue2);
+    }
+}
+
+O/P:
+max value of byte:127
+MINVALUE of Byte : -128
+max value of short:32767
+MINVALUE of short : -32768
+max value of long:9223372036854775807
+MINVALUE of long : -9223372036854775808
+
+******************************************************************************************************************
+
+*** CASTING ***
+CASTING means converting a number from one data type to another data type
+
+public class Hello {
+    public static void main(String[] args) {
+        byte Maxvalue = Byte.MAX_VALUE;
+        byte Minvalue = Byte.MIN_VALUE;
+        byte casting = Maxvalue;
+        byte casting1= (byte) (Maxvalue/2);
+        System.out.println(casting);
+        System.out.println(casting1);
+        
+//        Have a look at below code and try to figure it out
+        long num1 = Short.MAX_VALUE;
+        System.out.println(num1);
+    }
+}
+
+*****************************************************************************************************************
+
+*** FLOAT AND DOUBLE
+
+Float and Double are used to store floating numbers (Decimal Numbers)
+
+FLOAT is called Single precision and DOUBLE is called Double precision.
+Float is a single-precision data type means it occupies 4 bytes.
+Hence in large computations, we will not get a complete result.
+If we choose double data type, it occupies 8 bytes and we will get complete results.
+
+---To find max and min value ranges of float and double
+
+public class Hello {
+    public static void main(String[] args) {
+       float Maxvalue=Float.MAX_VALUE;
+        float Minvalue=Float.MIN_VALUE;
+       double MaxValue1=Double.MAX_VALUE;
+       double minvalue=Double.MIN_VALUE;
+        System.out.println("maxvalue of float :"+Maxvalue);
+        System.out.println("minvalue of float :"+Minvalue);
+        System.out.println("maxvalue of double :"+MaxValue1);
+        System.out.println("minvalue of double : "+minvalue);
+    }
+}
+
+O/P : 
+maxvalue of float :3.4028235E38
+minvalue of float :1.4E-45
+maxvalue of double :1.7976931348623157E308
+minvalue of double : 4.9E-324
+
+public class Hello {
+    public static void main(String[] args) {
+       float a = 4.32f; //Here if we dont write f after 4.32,it shows an error because it considers as a double value number by default
+        double b = 3.456;
+//  We prefer DOUBLE over float because It works fast while compiling
+        System.out.println(a);
+        System.out.println(b);
+        
+    }
+}
+O/P :
+4.32
+3.456
+*****************************************************************************************************************************************
+
+
+
