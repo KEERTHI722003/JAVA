@@ -15,3 +15,55 @@ public class Hello {
     }
 //Return data type is void.So it returns nothing
 }
+
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println(AreaOfRectangle(10,20));// Here the method is called and result od type Double is returned
+
+    }
+    public static double AreaOfRectangle(int length,int breadth){
+        int result = 2*(length+breadth);
+             return result;
+    }
+}
+
+O/P : 60.0
+
+*********************************************************************************************************************************
+Define a variable name of type string,marks of type int.Create a method to calculate grade.Create another method to display grade
+
+public class Hello {
+    public static void main(String[] args) {
+        String name = "Rezina John";
+        int marks = 98;
+        char studentgrade =Grade(marks);
+         display(studentgrade);
+
+    }
+    public static char Grade(int marks){
+
+        char grade;
+        if(marks == 100){
+            grade = 'A';
+
+        }
+        else if(marks<=99 && marks >90){
+            grade='B';
+        }
+        else if(marks<89 && marks >80){
+            grade='C';
+        }
+        else {
+            grade = 'D';
+        }
+        return grade;
+    }
+    public static void display(char studentgrade){
+        System.out.println(studentgrade);
+    }
+}
+O/p :
+B
+
+*******************************************************************************************************************************************
+
