@@ -60,7 +60,7 @@ public class Hello {
 O/P:60
 ************************************************************************************************************************************
 
-PRIMITIVE DATA TYPES
+                                                     PRIMITIVE DATA TYPES
 In JAVA We have 8 primitive data types
 *int
 *long
@@ -106,7 +106,7 @@ O/P:2147483647
 ** UNDERFLOW occurs when we try to assign a value to mINvalue of integer 
 
 *******************************************************************************************************
-**SHORT,LONG,BYTE**
+                                       **SHORT,LONG,BYTE**
 
 public class Hello {
     public static void main(String[] args) {
@@ -155,7 +155,7 @@ public class Hello {
 
 *****************************************************************************************************************
 
-*** FLOAT AND DOUBLE
+                                    *** FLOAT AND DOUBLE
 
 Float and Double are used to store floating numbers (Decimal Numbers)
 
@@ -202,7 +202,8 @@ O/P :
 
 *****************************************************************************************************************************************
 
-**** CHAR DATA TYPE ***
+                                                        **** CHAR DATA TYPE ***
+
 Char is a data type which is used to store a character enclosed within single quotes
 The width of the char datatype is 16 bits - 2 Bytes (Usually asked in interview)
 
@@ -235,8 +236,10 @@ O/P :
 Here the characters are converted into ASCII values and we got the sum
 
 ****************************************************************************************************************
-** BOOLEAN DATA TYPE **
+                                        ** BOOLEAN DATA TYPE **
+
 BOOLEAN is a datatype that is used to store flag values (true,false)
+Default value of boolean data type is false
 
 EXAMPLE :
 public class Hello {
@@ -343,6 +346,69 @@ public class Hello {
 }
 }
 **********************************************************************************************************
+--------------------         IF THEN STATEMENT           --------------------------
+--> if-then is a conditional statement which get execute the block of code only when the statement is true
+SYNTAX :
+            if (condition) {
+                //block of codes
+            }
+Example:
+public class Hello {
+    public static void main(String[] args) {
+       boolean isabove18 = true;
+       
+       if(isabove18==18) {
+           System.out.println("You are eligible to vote");
+       }
+//       The above statement get printed because the condition is true
+        if(isabove18==false) {
+            System.out.println("You are not eligible");
+        }
+//       The above statement is not gonna print because the condition is false as we assigned isabove18 to true
+    }
+}
+O/P :
+You are eligible to vote
+
+**********************************************************************************************************************************
+---------------------              LOGICAL "AND" & LOGICAL "OR"              -----------------------
+Logical AND - &&
+Logical OR  - ||
+The statements inside the block get executed when both the conditions are true if we use logical AND operator
+The statements inside the block get executed when any on of the conditions are true if we use logical OR operator
+
+EXAMPLE :
+public class Hello {
+    public static void main(String[] args) {
+       int num1 = 10,num2 = 20;
+//       LOGICAL AND
+        if(num1 == 10 && num2==20)
+            System.out.println("Both conditions are true");//If we dont use curly braces then the statement next to the condition get executed
+        if(num1 == 10 || num2 == 10){
+            System.out.println("One condition is true");
+}
+    }
+}
+O/P :
+Both conditions are true
+One condition is true
+
+***************************************************************************************************************************************************************
+Calculate the area of rectangle when the length and breadth of rectangle is 10 and 5 respectively.
+public class OperatorPrecedence{
+    public static void main(String args[]) {
+        int length, breadth;
+        double perimeter = 0.0;
+        length = 10;
+        breadth = 5;
+        perimeter = (length + breadth)*2;
+        // perimeter = (length + breadth)* 2 ;
+        System.out.println("The perimeter of the rectangle is = " + perimeter);
+    }
+}
+***************************************************************************************************************************************************************
+
+
 
 
 
