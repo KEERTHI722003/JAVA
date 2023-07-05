@@ -62,8 +62,123 @@ public class Hello {
         System.out.println(studentgrade);
     }
 }
-O/p :
+O/p :B
 B
 
 *******************************************************************************************************************************************
+Declare a double variable weight and take the input from the user and create a method to convert to grams and milligrams
+
+public class Hello {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the weight in kgs : ");
+        double kgs1= scanner.nextDouble();
+        convert(kgs1);
+
+    }
+    public static void convert(double kgs){
+        double grams = kgs*1000;
+        double milligrams = kgs*100000;
+        System.out.println(grams);
+        System.out.println(milligrams);
+    }
+}
+
+O/P :
+Enter the weight in kgs : 
+1
+1000.0
+100000.0
+**************************************************************************************************************************************************
+Create an integer kilobytes and take input from the user in kilobytes.Now craete a method to convert kilobytes into megabytes
+HINT:Divide kilobytes by 1024 to get megabytes
+
+public class Hello {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int kilobytes = scanner.nextInt();
+        int mega = convert(kilobytes);
+        System.out.println(mega);
+
+
+
+    }
+    public static int convert(int kilobytes){
+        int megabytes1;
+        megabytes1 =  kilobytes/1024;
+        return megabytes1;
+    }
+}
+
+*************************************************************************************************************************************************
+Write a program to accept three number and check whether they are pythogorean triplet or not.
+public class Hello {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt(), b = scanner.nextInt(), c = scanner.nextInt();
+
+        int csquare = c * c;
+        int bsquare = b * b;
+        int asquare = a * a;
+        if (csquare = bsquare + asquare) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
+
+
+    }
+}
+
+Its not a very good logic please do check it out.Because we didn't find which is the heighest value
+*************************************************************************************************************************************************
+                                 ***           METHOD OVERloading            ***
+Method overloading has multiple methods having same name but different in parameters,it is known as Method overloading.
+Advantages :
+Increases the readability of the code
+Method can be overload in two ways
+1.By changing the number of arguments
+2.By changing the datatype of the arguments.
+ EXAMPLE :
+
+//Variable decalaration
+//variable is declared followed as
+//Syntax:Data_type variable_name = Value;
+
+
+import java.util.Scanner;
+
+public class Hello {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int length = scanner.nextInt();
+        int breadth= scanner.nextInt();
+        double height = scanner.nextInt();
+        area(length);
+        area(length,breadth);
+        area(length,height);
+    
+    }
+    public static double area(int length,int breadth){
+        double rec_area = 2 * (length + breadth);
+        return rec_area;
+    }
+    public static double area(int length){
+        double sq_area =  (length *length);
+        return sq_area;
+    }
+    public static double area(int length,double height){
+        double tri_area = 2 * (length + height);
+        return tri_area;
+    }
+}
+O/P :
+2
+3
+5
+4.0
+10.0
+14.0
+
+
 
