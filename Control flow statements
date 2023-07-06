@@ -1,0 +1,44 @@
+                                  ***             SWITCH         ***
+Write a program to check wheather a character is a vowel or not.
+import java.util.Scanner;
+
+public class Hello {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the character :");
+        String vowel = scanner.nextLine();
+        switch(vowel.toLowerCase()) {
+            case "a": case "e": case "i": case "o": case "u":
+                System.out.println("Vowel");
+                break;
+            default:
+                System.out.println("Not an vowel");
+
+        }
+    }
+}
+
+*****************************************************************************************************************************************************
+                                  ***           FOR LOOP          ***
+Write a program to print prime numbers in range of 1 to n.
+public class ForloopChallenge {
+    public static void main(String args[]) {
+        int n = 100;
+        for (int i = 1; i < n; i++) {
+            isprime(i);
+        }
+ 
+    }
+ 
+    public static void isprime(int n) {
+        int count = 0;
+        for (int j = 1; j <= n; j++) {
+            if (n % j == 0)
+                count = count + 1;
+        }
+        if (count == 2)
+            System.out.println(n + " Is a prime number");
+    }
+}
+*******************************************************************************************************************************************************
